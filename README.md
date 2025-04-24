@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 🪙 Real-Time Crypto Price Tracker
 
-## Project info
+A responsive React + Redux Toolkit web app that simulates real-time updates of cryptocurrency prices and renders them in a detailed table. Includes price changes, volume, market cap, and mini 7-day performance charts.
 
-**URL**: https://lovable.dev/projects/aa54ae0e-2f3b-4158-9b5d-9f5201884645
+## 🚀 Tech Stack
 
-## How can I edit this code?
+- **Frontend:** React (Vite)
+- **State Management:** Redux Toolkit
+- **Language:** TypeScript
+- **Styling:** CSS Modules / Custom CSS
 
-There are several ways of editing your application.
+## 🔧 Features
 
-**Use Lovable**
+- Real-time simulated price updates every 2 seconds (WebSocket simulation)
+- Redux-powered state management for scalability
+- Displays key metrics: Price, 1h/24h/7d %, Volume, Market Cap
+- Includes coin logo and 7-day performance mini-chart
+- Color-coded percentage changes (green for gain, red for loss)
+- Fully responsive table layout
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/aa54ae0e-2f3b-4158-9b5d-9f5201884645) and start prompting.
+## 📂 Folder Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+crypto-tracker/
+├── public/
+│   └── assets/        # Logos, 7D chart images
+├── src/
+│   ├── app/
+│   │   └── store.ts
+│   ├── features/
+│   │   └── crypto/
+│   │       ├── cryptoSlice.ts
+│   │       └── CryptoTable.tsx
+│   ├── utils/
+│   │   └── simulateUpdates.ts
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+└── README.md
+```
 
-**Use your preferred IDE**
+## 🚧 How to Run Locally
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Clone the repository
+git clone https://github.com/saidul-122/asset-wave-monitor-main
+cd crypto-tracker
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📈 Demo Preview
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+https://resilient-bienenstitch-bbb023.netlify.app/
 
-**Use GitHub Codespaces**
+## 📖 Description of Main Files
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **`store.ts`** - Sets up the Redux store with the crypto slice
+- **`cryptoSlice.ts`** - Handles state for crypto asset updates
+- **`simulateUpdates.ts`** - Simulates WebSocket by dispatching periodic asset updates
+- **`CryptoTable.tsx`** - React component that renders the asset table
+- **`index.ts` (types)** - TypeScript interface for the asset schema
 
-## What technologies are used for this project?
+## ✨ Contributions
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/aa54ae0e-2f3b-4158-9b5d-9f5201884645) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Feel free to fork and improve! PRs are welcome.
